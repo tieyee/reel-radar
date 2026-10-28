@@ -8,6 +8,11 @@ puts them on one page with a "+ Calendar" button to plan his version.
 10× means it's on pace for ten times their normal. Only reels at 2.5× or more show,
 up to 10 per niche and 2 per creator.
 
+**Hidden** = reels whose caption reads as an ad, an event or a life moment
+(`NOT_A_FORMAT` in `radar.py`). Paid reach and one-off occasions spike views
+without teaching a format he can copy, so they sit in a fold-out list per niche
+instead. Creators whose reels are mostly that get listed under Accounts to replace.
+
 ## Files
 
 | File | What it does |
