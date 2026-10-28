@@ -5,7 +5,9 @@ Usage: APIFY_TOKEN=... python radar.py
 import datetime as dt
 import json
 import os
+import re
 import statistics
+import unicodedata
 import time
 import urllib.parse
 import urllib.request
@@ -19,6 +21,38 @@ API = "https://api.apify.com/v2"
 # learn_curve() swaps in real numbers once enough reels have been re-checked.
 DEFAULT_CURVE = [(0, 0.0), (1, 0.45), (2, 0.6), (3, 0.7), (5, 0.8), (7, 0.87), (14, 0.95), (30, 1.0)]
 CURVE_DAYS = [1, 2, 3, 5, 7, 10]
+
+# Reels that spiked for a reason he can't copy as a format. First match wins.
+# ponytail: caption keywords only (the app has no AI), so an ad with a bare caption slips through.
+# Prices alone don't count: agents post prices in normal listing reels.
+NOT_A_FORMAT = [
+    ("Ad", r"#(ad|ads|sponsored|partner)\b|paid partnership|sponsored|in collab(oration)? with|promo|use (my )?code"
+           r"|discount|% off|giveaway|win free|from now (til|till|until)|brought to you by|shopee|lazada|affiliate"
+           r"|shop now|kreator shop|\bdeals?\b|meet the|credits|merch"),
+    ("Event or news", r"\b\d{1,2}(st|nd|rd|th)?\s*(to|-|–|until|till)\s*\d{1,2}(st|nd|rd|th)?\s+"
+                      r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)|this weekend|walkabout|pop-?up|festival"
+                      r"|halloween|christmas|chinese new year|\bcny\b|deepavali|hari raya|national day|read more"
+                      r"|more details|now open|grand opening|exhibit|museum|on view|tickets?\b|cinema|school holidays"
+                      r"|\bfest\b|takeover|step into|event\b"),
+    ("Life moment", r"found out|pregnan|we'?re expecting|gender|morning sickness|🤰|our baby|engaged|proposal"
+                    r"|wedding|passed away|\brip\b|birthday|anniversary"),
+]
+
+
+def not_a_format(r):
+    """Why this reel can't be copied as a format (an ad, an event, a life moment), or None."""
+    if r.get("paid"):
+        return "Ad"
+    text = unicodedata.normalize("NFKC", r.get("caption") or "").lower()  # NFKC turns 𝐖𝐢𝐧 into win
+    return next((why for why, pat in NOT_A_FORMAT if re.search(pat, text)), None)
+
+
+def ad_heavy(reels, min_reels=5, share=0.5):
+    """{creator: (skipped, total)} for creators whose reels are mostly ads, events or life moments."""
+    by = {}
+    for r in reels.values():
+        by.setdefault(r["owner"], []).append(not_a_format(r) is not None)
+    return {o: (sum(v), len(v)) for o, v in by.items() if len(v) >= min_reels and sum(v) >= share * len(v)}
 
 
 def load(path, default):
@@ -179,6 +213,8 @@ def ingest(reels, items, niche_of, at):
             caption=(it.get("caption") or "")[:400],
             audio=audio_of(it),
             thumb_src=it.get("displayUrl"),
+            # ponytail: field names unverified against the scraper; captions catch most ads anyway.
+            paid=bool(it.get("isSponsored") or it.get("paidPartnership") or it.get("isPaidPartnership")),
         )
         r["snaps"] = [s for s in r["snaps"] if s[0] != at] + [[at, views]]
 
@@ -285,6 +321,7 @@ def main():
             "caption": r["caption"], "audio": r["audio"], "posted": r["posted"],
             "lang": accounts.get(r["owner"], {}).get("lang", "en"),
             "early": age < cfg["early_days"], "seen": r["code"] in shown_before,
+            "skip": not_a_format(r),
         }
         if r["niche"] == "own":
             if age <= 30:
@@ -292,7 +329,15 @@ def main():
         elif score is not None and age <= cfg["max_age_days"]:
             cards.append(card)
 
-    picked = select(cards, cfg["min_score"], cfg["per_niche"], cfg["per_creator"])
+    picked = select([c for c in cards if not c["skip"]], cfg["min_score"], cfg["per_niche"], cfg["per_creator"])
+    # Shown as a short list so a wrong guess is easy to spot. No thumbnails.
+    hidden = select([c for c in cards if c["skip"]], cfg["min_score"], cfg["per_niche"], cfg["per_creator"])
+    flags = health.get("flags", []) + [
+        {"handle": h, "niche": accounts[h]["niche"],
+         "reason": f"Mostly ads, events or life moments: {n} of their last {total} reels. Their spikes teach no format."}
+        for h, (n, total) in sorted(ad_heavy({c: r for c, r in reels.items() if r["owner"] in accounts}).items())
+        if h not in {f["handle"] for f in health.get("flags", [])}
+    ]
     own_cards = sorted(own_cards, key=lambda c: c["posted"], reverse=True)[:10]
     shown = [c for lst in picked.values() for c in lst] + own_cards
     for c in shown:
@@ -307,13 +352,16 @@ def main():
         generated=at,
         curve_learned=learned,
         own={"handle": own, "reels": own_cards} if own else None,
-        niches=[{**{k: n[k] for k in ("id", "name", "color")}, "reels": picked.get(n["id"], [])} for n in cfg["niches"]],
-        health=health.get("flags", []),
+        niches=[{**{k: n[k] for k in ("id", "name", "color")}, "reels": picked.get(n["id"], []),
+                 "hidden": hidden.get(n["id"], [])} for n in cfg["niches"]],
+        health=flags,
     )
     state.update(health=health, shown=[c["code"] for c in shown])
     save(DATA / "reels.json", reels)
     total = sum(len(v) for v in picked.values())
-    publish(f"Found {total} standout reels across {len(picked)} niches.")
+    skipped = sum(len(v) for v in hidden.values())
+    publish(f"Found {total} standout reels you can copy"
+            + (f", and hid {skipped} that spiked as ads, events or life moments." if skipped else "."))
 
 
 if __name__ == "__main__":

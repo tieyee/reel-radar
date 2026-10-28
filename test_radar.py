@@ -1,5 +1,5 @@
 """Checks for the scoring maths. Run: python test_radar.py"""
-from radar import DEFAULT_CURVE, baseline, curve_at, est_final, learn_curve, select
+from radar import DEFAULT_CURVE, ad_heavy, baseline, curve_at, est_final, learn_curve, not_a_format, select
 
 T0 = "2026-10-01T00:00:00+00:00"
 
@@ -46,6 +46,32 @@ def test_learn_curve():
     pts, learned = learn_curve(reels)
     assert learned and abs(pts[1][1] - 0.6) < 1e-9
     assert all(b[1] >= a[1] for a, b in zip(pts, pts[1:]))  # never goes down
+
+
+def test_not_a_format():
+    # The six reels the 2026-10-28 trial picked, all uncopyable.
+    cases = {
+        "Tried the Food Bar @7elevensg ... Here's the deal: From now til": "Ad",
+        "CMLink SIM-only Plan ... October Promo • 50% off 6 months": "Ad",
+        "🚨 𝐓-𝐑𝐄𝐗 𝐒𝐏𝐎𝐓𝐓𝐄𝐃! 𝐖𝐢𝐧 𝐅𝐑𝐄𝐄 𝐃𝐢𝐧𝐨 𝐏𝐥𝐮𝐬𝐡𝐢𝐞𝐬": "Ad",
+        "Take a walk through Sembawang Estate's Halloween decorations": "Event or news",
+        "Sit-n-Read node at City Square Mall. Read more details at our link in profile": "Event or news",
+        "THE DAY WE FOUND OUT! 🥹🍼🧸": "Life moment",
+        "From 23 to 25 October the walk is in malls": "Event or news",
+    }
+    for caption, why in cases.items():
+        assert not_a_format({"caption": caption}) == why, caption
+    # Normal agent content, prices included, stays in.
+    for caption in ("3 mistakes HDB sellers make. #3 cost my client $40k", "Sold! 4-room in Punggol for $680,000", ""):
+        assert not_a_format({"caption": caption}) is None, caption
+    assert not_a_format({"caption": "", "paid": True}) == "Ad"
+
+
+def test_ad_heavy():
+    reels = {f"a{i}": {"owner": "a", "caption": "promo" if i < 3 else "tips"} for i in range(5)}
+    reels |= {f"b{i}": {"owner": "b", "caption": "promo" if i < 2 else "tips"} for i in range(5)}
+    reels |= {f"c{i}": {"owner": "c", "caption": "promo"} for i in range(4)}  # too few to judge
+    assert ad_heavy(reels) == {"a": (3, 5)}
 
 
 if __name__ == "__main__":

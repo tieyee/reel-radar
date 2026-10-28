@@ -4,167 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reel Radar</title>
+<meta name="description" content="Each week, the Instagram reels that beat their creator’s usual views by 2.5× or more, with ads, events and life moments set aside.">
 <meta name="robots" content="noindex">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F5A45'/%3E%3Crect x='6' y='18' width='20' height='8' fill='%239FD3C1'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23C8CFD6'/%3E%3Crect x='6' y='20' width='20' height='3' fill='%23121A22'/%3E%3Crect x='6' y='10' width='12' height='3' fill='%23A3165E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
-<style>
-:root {
-  --wall: #F5F6F2;
-  --ink: #1C2421;
-  --mute: #5C6863;
-  --line: #D8DDD5;
-  --estate: #1F5A45;
-  --on-paint: #1C2421;
-  color-scheme: light dark;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --wall: #131715;
-    --ink: #E8ECE7;
-    --mute: #98A49E;
-    --line: #2A312D;
-    --estate: #7CC4A4;
-  }
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0;
-  background: var(--wall);
-  color: var(--ink);
-  font: 400 16px/1.5 "Archivo", system-ui, sans-serif;
-  font-variation-settings: "wdth" 100;
-}
-a { color: inherit; }
-:focus-visible { outline: 3px solid var(--estate); outline-offset: 2px; }
-.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
-
-/* Masthead */
-.top { padding: 28px 16px 18px; }
-.top h1 {
-  margin: 0;
-  font-size: clamp(44px, 12vw, 88px);
-  line-height: .9;
-  font-weight: 850;
-  font-variation-settings: "wdth" 62;
-  letter-spacing: -.01em;
-  color: var(--estate);
-}
-.top .week { margin: 10px 0 0; font-size: 18px; font-weight: 600; }
-.top .status { margin: 4px 0 0; color: var(--mute); max-width: 62ch; }
-
-/* Niche jump bar */
-.jump {
-  position: sticky; top: 0; z-index: 5;
-  background: var(--wall);
-  border-bottom: 1px solid var(--line);
-}
-.jump ul {
-  display: flex; gap: 6px; list-style: none;
-  overflow-x: auto; scrollbar-width: none;
-  max-width: 1180px; margin: 0 auto; padding: 10px 16px;
-}
-.jump ul::-webkit-scrollbar { display: none; }
-.jump a {
-  display: flex; align-items: center; gap: 8px; white-space: nowrap;
-  padding: 6px 12px 6px 6px; border-radius: 999px;
-  border: 1px solid var(--line); text-decoration: none; font-size: 14px; font-weight: 500;
-}
-.jump a i { width: 18px; height: 18px; border-radius: 50%; background: var(--paint); flex: none; }
-.jump a b { font-weight: 700; font-variation-settings: "wdth" 75; color: var(--mute); }
-
-/* Facade band: one per niche */
-section { padding-bottom: 36px; scroll-margin-top: 60px; }
-.band {
-  background: var(--paint); color: var(--on-paint);
-  margin: 0 0 18px;
-}
-.band .wrap { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 12px; }
-.band h2 {
-  margin: 0; font-size: clamp(32px, 7.5vw, 56px); line-height: .95; font-weight: 800;
-  font-variation-settings: "wdth" 66; letter-spacing: -.005em;
-}
-.band p { margin: 0; font-size: 14px; font-weight: 600; white-space: nowrap; padding-bottom: 4px; }
-.own .band { color: #F5F6F2; }
-.empty { color: var(--mute); margin: 0; max-width: 60ch; }
-
-/* Reel grid */
-.grid {
-  display: grid; gap: 22px 14px;
-  grid-template-columns: repeat(auto-fill, minmax(min(46%, 210px), 1fr));
-}
-.reel { display: flex; flex-direction: column; min-width: 0; }
-.reel.seen .shot img { opacity: .5; }
-.shot {
-  position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden;
-  background: color-mix(in srgb, var(--paint) 45%, var(--wall));
-  border-radius: 4px;
-}
-.shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.shot .noimg { position: absolute; inset: 0; display: grid; place-items: center; color: var(--mute); font-size: 13px; }
-.plate {
-  position: absolute; left: 0; bottom: 0;
-  background: var(--paint); color: var(--on-paint);
-  padding: 4px 10px 2px 8px; border-top-right-radius: 4px;
-  font-size: 44px; line-height: 1; font-weight: 850; font-variation-settings: "wdth" 62;
-  letter-spacing: -.01em;
-}
-.plate small { font-size: .55em; font-weight: 700; margin-left: 1px; }
-.own .plate { color: #F5F6F2; font-size: 34px; }
-.who { display: flex; justify-content: space-between; gap: 8px; margin: 10px 0 0; font-size: 14px; }
-.who a { font-weight: 650; text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.who a:hover { text-decoration: underline; }
-.who span { color: var(--mute); white-space: nowrap; }
-.views { display: flex; justify-content: space-between; gap: 8px; margin: 2px 0 0; font-size: 13px; color: var(--mute); }
-.own .views { margin-top: 10px; }
-.tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 2px; }
-.tags span { font-size: 12px; font-weight: 600; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line); color: var(--mute); }
-.tags .early { border-color: var(--estate); color: var(--estate); }
-.cap {
-  margin: 6px 0 0; font-size: 14px; line-height: 1.45;
-  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-}
-.audio { margin: 6px 0 0; font-size: 13px; color: var(--mute); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.acts { display: flex; gap: 6px; margin-top: auto; padding-top: 10px; }
-.acts a {
-  flex: 1; text-align: center; text-decoration: none; font-size: 13px; font-weight: 600;
-  padding: 8px 4px; border-radius: 4px; border: 1px solid var(--line); white-space: nowrap;
-}
-.acts a.cal { background: var(--estate); border-color: var(--estate); color: var(--wall); }
-.acts a:hover { border-color: var(--ink); }
-
-/* His reels: one scrolling row */
-.own .grid { grid-auto-flow: column; grid-auto-columns: minmax(172px, 190px); grid-template-columns: none; overflow-x: auto; padding-bottom: 8px; }
-
-/* Replace list + footer */
-.health ul { list-style: none; margin: 0; padding: 0; max-width: 680px; }
-.health li { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
-.health li i { width: 12px; height: 12px; margin-top: 6px; border-radius: 50%; background: var(--paint); flex: none; }
-.health li span { color: var(--mute); }
-footer { border-top: 1px solid var(--line); padding: 20px 0 40px; color: var(--mute); font-size: 14px; }
-footer p { margin: 10px 0 0; max-width: 62ch; }
-.meter { height: 6px; background: var(--line); border-radius: 3px; max-width: 320px; margin-top: 8px; overflow: hidden; }
-.meter div { height: 100%; background: var(--estate); }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="radar.css">
 </head>
 <body>
-<header class="wrap top">
-  <h1>Reel Radar</h1>
-  <p class="week" id="week">Loading this week's reels</p>
-  <p class="status" id="status"></p>
+<header class="bar">
+  <div class="container">
+    <a class="mark" href="./" aria-label="Reel Radar, this week">Reel Radar</a>
+    <time id="checked"></time>
+  </div>
 </header>
-<nav class="jump" aria-label="Jump to niche"><ul id="jump"></ul></nav>
-<main id="main"></main>
-<footer><div class="wrap" id="foot"></div></footer>
+
+<main class="container">
+  <section class="week" aria-labelledby="week">
+    <h1 id="week">Loading this week’s reels</h1>
+    <p class="status" id="status"></p>
+    <div class="sheet" id="ledger" hidden></div>
+  </section>
+  <div id="main"></div>
+</main>
+
+<footer><div class="container" id="foot"></div></footer>
 
 <script>
-const OWN_PAINT = "#1F5A45";
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const sgDate = (iso, opts) => new Date(iso).toLocaleDateString("en-SG", { timeZone: "Asia/Singapore", ...opts });
 const compact = n => new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(n);
-const ageText = d => d < 1 ? "Today" : d < 2 ? "1 day old" : `${Math.floor(d)} days old`;
+const ageText = d => d < 1 ? "today" : d < 2 ? "1 day old" : `${Math.floor(d)} days old`;
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
 
 function calendarLink(r, nicheName) {
   const lines = [
@@ -181,36 +53,66 @@ function calendarLink(r, nicheName) {
   });
 }
 
-function card(r, nicheName, own = false) {
+function reel(r, nicheName, own = false) {
   const tags = [
-    r.early && `<span class="early" title="Under 2 days old, so the score can still change">Early</span>`,
-    r.seen && !own && `<span>Seen last week</span>`,
-    r.lang === "zh" && `<span lang="zh">中文</span>`,
+    r.early && `<span class="tag early" title="Under 2 days old, so the score can still change">Early</span>`,
+    r.seen && !own && `<span class="tag">Seen last week</span>`,
+    r.lang === "zh" && `<span class="tag" lang="zh">中文</span>`,
   ].filter(Boolean).join("");
-  const plate = r.score != null
-    ? `<span class="plate" aria-label="${r.score} times their usual views">${r.score.toFixed(1)}<small>×</small></span>` : "";
-  return `<article class="reel${r.seen ? " seen" : ""}">
-    <a class="shot" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="Open reel by @${esc(r.owner)} on Instagram">
-      ${r.thumb ? `<img src="${esc(r.thumb)}" alt="" loading="lazy">` : `<span class="noimg">No preview</span>`}
-      ${plate}
+  return `<li class="reel${r.seen ? " seen" : ""}">
+    <a class="thumb" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="Open reel by @${esc(r.owner)} on Instagram">
+      ${r.thumb ? `<img src="${esc(r.thumb)}" alt="" width="96" height="120" loading="lazy">` : `<span class="noimg">No preview</span>`}
     </a>
-    ${own ? "" : `<div class="who"><a href="https://www.instagram.com/${esc(r.owner)}/" target="_blank" rel="noopener">@${esc(r.owner)}</a></div>`}
-    <p class="views"><span>${compact(r.views)} views</span><span>${ageText(r.age_days)}</span></p>
-    ${tags ? `<div class="tags">${tags}</div>` : ""}
-    ${r.caption ? `<p class="cap">${esc(r.caption)}</p>` : ""}
-    <p class="audio">♪ ${esc(r.audio)}</p>
-    <div class="acts">
-      <a href="${esc(r.url)}" target="_blank" rel="noopener">Watch</a>
-      <a class="cal" href="${esc(calendarLink(r, nicheName))}" target="_blank" rel="noopener" aria-label="Add to calendar">+ Calendar</a>
+    <div class="body">
+      <p class="who">${own ? "" : `<a href="https://www.instagram.com/${esc(r.owner)}/" target="_blank" rel="noopener">@${esc(r.owner)}</a>`}<span><span class="num">${compact(r.views)}</span> views, ${ageText(r.age_days)}</span></p>
+      ${r.caption ? `<p class="cap">${esc(r.caption)}</p>` : ""}
+      <p class="audio">Audio: ${esc(r.audio)}</p>
+      ${tags ? `<p class="tags">${tags}</p>` : ""}
     </div>
-  </article>`;
+    <p class="score">${r.score != null ? `<span class="visually-hidden">Score </span>${r.score.toFixed(1)}<small aria-label="times their usual views">×</small>` : ""}</p>
+    <div class="acts">
+      <a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">Watch</a>
+      <a class="btn" href="${esc(calendarLink(r, nicheName))}" target="_blank" rel="noopener">Add to calendar</a>
+    </div>
+  </li>`;
 }
 
-function section(id, name, paint, count, body, extraClass = "") {
-  return `<section id="${id}" class="${extraClass}" style="--paint:${paint}">
-    <div class="band"><div class="wrap"><h2>${esc(name)}</h2>${count != null ? `<p>${count} ${count === 1 ? "reel" : "reels"}</p>` : ""}</div></div>
-    <div class="wrap">${body}</div>
+function hiddenList(list) {
+  if (!list || !list.length) return "";
+  return `<details class="hidden">
+    <summary>${plural(list.length, "reel", "reels")} hidden as an ad, event or life moment</summary>
+    <table>
+      <thead><tr><th>Why</th><th>Creator</th><th class="num">Score</th><th><span class="visually-hidden">Link</span></th></tr></thead>
+      <tbody>${list.map(r => `<tr>
+        <td>${esc(r.skip)}</td>
+        <td><a href="https://www.instagram.com/${esc(r.owner)}/" target="_blank" rel="noopener">@${esc(r.owner)}</a></td>
+        <td class="num">${r.score != null ? r.score.toFixed(1) + "×" : ""}</td>
+        <td><a href="${esc(r.url)}" target="_blank" rel="noopener">Watch</a></td>
+      </tr>`).join("")}</tbody>
+    </table>
+  </details>`;
+}
+
+function section(id, name, count, body, cls = "") {
+  return `<section class="niche ${cls}" id="${id}" aria-labelledby="${id}-h">
+    <div class="niche-head"><h2 id="${id}-h">${esc(name)}</h2>${count != null ? `<p>${plural(count, "reel", "reels")} to copy</p>` : ""}</div>
+    ${body}
   </section>`;
+}
+
+function ledger(niches, own) {
+  const ownRow = `<tr><td><a href="#his-reels">His reels</a></td><td class="num zero">${own ? own.reels.length : 0}</td><td></td></tr>`;
+  const rows = ownRow + niches.map(n => {
+    const k = n.reels.length, h = (n.hidden || []).length;
+    return `<tr><td><a href="#${n.id}">${esc(n.name)}</a></td><td class="num${k ? "" : " zero"}">${k}</td><td class="num zero">${h}</td></tr>`;
+  }).join("");
+  const sum = f => niches.reduce((a, n) => a + f(n), 0);
+  return `<table class="ledger">
+    <caption>This week, niche by niche</caption>
+    <thead><tr><th>Niche</th><th class="num">To copy</th><th class="num">Hidden</th></tr></thead>
+    <tbody>${rows}</tbody>
+    <tfoot><tr><td>All niches</td><td class="num">${sum(n => n.reels.length)}</td><td class="num">${sum(n => (n.hidden || []).length)}</td></tr></tfoot>
+  </table>`;
 }
 
 function render(d) {
@@ -219,11 +121,18 @@ function render(d) {
     ? `Week of ${sgDate(d.generated, { day: "numeric", month: "long", year: "numeric" })}`
     : "No reels yet";
   document.getElementById("status").textContent = d.status || "";
+  if (d.checked) {
+    const t = document.getElementById("checked");
+    t.dateTime = d.checked;
+    t.textContent = `Checked ${sgDate(d.checked, { day: "numeric", month: "short" })}`;
+  }
 
-  const jump = [];
   let html = "";
-
   if (d.generated) {
+    const box = document.getElementById("ledger");
+    box.innerHTML = ledger(niches, d.own);
+    box.hidden = !niches.length;
+
     const own = d.own;
     let body;
     if (!own) body = `<p class="empty">Add his Instagram handle as own_account in config.json to see his reels here, scored the same way.</p>`;
@@ -231,43 +140,38 @@ function render(d) {
     else {
       const scored = own.reels.some(r => r.score != null);
       body = (scored ? "" : `<p class="empty">Scores appear once @${esc(own.handle)} has a few more reels to compare against.</p>`)
-        + `<div class="grid">${own.reels.map(r => card(r, "His own", true)).join("")}</div>`;
+        + `<ul class="reels">${own.reels.map(r => reel(r, "His own", true)).join("")}</ul>`;
     }
-    html += section("his-reels", "His reels", OWN_PAINT, null, body, "own");
-    jump.push(`<li><a href="#his-reels" style="--paint:${OWN_PAINT}"><i></i>His reels</a></li>`);
+    html += section("his-reels", "His reels", null, body, "own");
   }
 
   for (const n of niches) {
-    const body = n.reels.length
-      ? `<div class="grid">${n.reels.map(r => card(r, n.name)).join("")}</div>`
-      : `<p class="empty">No reel in this niche got 2.5× its creator's usual views this week.</p>`;
-    html += section(n.id, n.name, n.color, n.reels.length, body);
-    jump.push(`<li><a href="#${n.id}" style="--paint:${n.color}"><i></i>${esc(n.name)} <b>${n.reels.length}</b></a></li>`);
+    const body = (n.reels.length
+      ? `<ul class="reels">${n.reels.map(r => reel(r, n.name)).join("")}</ul>`
+      : `<p class="empty">No reel he could copy got 2.5× its creator’s usual views this week.</p>`) + hiddenList(n.hidden);
+    html += section(n.id, n.name, n.reels.length, body);
   }
 
   if (d.health && d.health.length) {
-    const paint = Object.fromEntries(niches.map(n => [n.id, n.color]));
     const name = Object.fromEntries(niches.map(n => [n.id, n.name]));
-    html += section("replace", "Accounts to replace", "var(--line)", null,
-      `<ul>${d.health.map(h => `<li style="--paint:${paint[h.niche] || "var(--line)"}"><i></i><div><a href="https://www.instagram.com/${esc(h.handle)}/" target="_blank" rel="noopener">@${esc(h.handle)}</a> <span>${esc(name[h.niche] || h.niche)}</span><br>${esc(h.reason)}</div></li>`).join("")}</ul>`,
-      "health");
+    html += section("replace", "Accounts to replace", null,
+      `<table><thead><tr><th>Creator</th><th class="hide-sm">Niche</th><th>Why</th></tr></thead><tbody>${d.health.map(h =>
+        `<tr><td><a href="https://www.instagram.com/${esc(h.handle)}/" target="_blank" rel="noopener">@${esc(h.handle)}</a></td><td class="hide-sm">${esc(name[h.niche] || h.niche)}</td><td>${esc(h.reason)}</td></tr>`).join("")}</tbody></table>`,
+      "replace");
   }
 
   if (!d.generated) {
-    html += `<div class="wrap"><p class="empty">This page fills in after the first weekly run. The README covers setup: an Apify key, picking creators, then turning on the weekly run.</p></div>`;
+    html += `<p class="empty">This page fills in after the first weekly run. The README covers setup: an Apify key, picking creators, then turning on the weekly run.</p>`;
   }
-
   document.getElementById("main").innerHTML = html;
-  document.getElementById("jump").innerHTML = jump.join("");
-  document.querySelector(".jump").hidden = !jump.length;
 
   const s = d.spend;
   if (s) {
     const month = new Date(s.month + "-01T00:00:00").toLocaleDateString("en-SG", { month: "long" });
     const pct = Math.min(100, (s.usd / s.cap) * 100);
     document.getElementById("foot").innerHTML =
-      `<div>Scraping spend in ${month}: $${s.usd.toFixed(2)} of $${s.cap}</div><div class="meter" role="img" aria-label="${pct.toFixed(0)}% of budget used"><div style="width:${pct}%"></div></div>`
-      + (d.generated ? `<p>Last run ${sgDate(d.generated, { weekday: "short", day: "numeric", month: "short" })}. ${d.curve_learned ? "Scores use growth patterns learned from these creators." : "Scores use a standard growth pattern until about 4 weeks of data come in."} The score is how many times its creator's usual views a reel got by that age. Early means under 2 days old, so the score can still change.</p>` : "");
+      `<p class="spend">Scraping spend in ${month}: <span class="num">$${s.usd.toFixed(2)}</span> of <span class="num">$${s.cap}</span></p><div class="meter" role="img" aria-label="${pct.toFixed(0)}% of budget used"><div style="width:${pct}%"></div></div>`
+      + (d.generated ? `<p>Last run ${sgDate(d.generated, { weekday: "short", day: "numeric", month: "short" })}. ${d.curve_learned ? "Scores use growth patterns learned from these creators." : "Scores use a standard growth pattern until about 4 weeks of data come in."} The score is how many times its creator’s usual views a reel got by that age. Early means under 2 days old, so the score can still change. Reels whose captions read as an ad, an event or a life moment are hidden, since a spike from paid reach or a one-off occasion teaches no format; open the hidden list to check the call.</p>` : "");
   }
 }
 
@@ -275,7 +179,7 @@ fetch("data.json", { cache: "no-store" })
   .then(r => r.ok ? r.json() : Promise.reject(r.status))
   .then(render)
   .catch(() => {
-    document.getElementById("week").textContent = "Couldn't load this week's data";
+    document.getElementById("week").textContent = "Couldn’t load this week’s data";
     document.getElementById("status").textContent = "data.json is missing or unreadable. Check the latest weekly run on GitHub, under Actions.";
   });
 </script>

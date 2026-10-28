@@ -7,13 +7,15 @@
    "id": "realestate",
    "name": "Real estate agents",
    "color": "#9FD3C1",
-   "reels": []
+   "reels": [],
+   "hidden": []
   },
   {
    "id": "fitness",
    "name": "Health and fitness",
    "color": "#F3D57A",
-   "reels": [
+   "reels": [],
+   "hidden": [
     {
      "code": "Deviq__gNfG",
      "url": "https://www.instagram.com/p/Deviq__gNfG/",
@@ -28,7 +30,7 @@
      "lang": "en",
      "early": false,
      "seen": false,
-     "thumb": "thumbs/Deviq__gNfG.jpg"
+     "skip": "Ad"
     }
    ]
   },
@@ -36,7 +38,8 @@
    "id": "family",
    "name": "Family, dad and dog",
    "color": "#F2B6A0",
-   "reels": [
+   "reels": [],
+   "hidden": [
     {
      "code": "De1czAuzvCo",
      "url": "https://www.instagram.com/p/De1czAuzvCo/",
@@ -51,7 +54,7 @@
      "lang": "en",
      "early": false,
      "seen": false,
-     "thumb": "thumbs/De1czAuzvCo.jpg"
+     "skip": "Ad"
     },
     {
      "code": "De28HTfB3K_",
@@ -67,7 +70,7 @@
      "lang": "en",
      "early": false,
      "seen": false,
-     "thumb": "thumbs/De28HTfB3K_.jpg"
+     "skip": "Event or news"
     },
     {
      "code": "DerFNG7DdJc",
@@ -83,7 +86,7 @@
      "lang": "en",
      "early": false,
      "seen": false,
-     "thumb": "thumbs/DerFNG7DdJc.jpg"
+     "skip": "Event or news"
     }
    ]
   },
@@ -91,7 +94,8 @@
    "id": "travel",
    "name": "Travel",
    "color": "#A8C8E8",
-   "reels": [
+   "reels": [],
+   "hidden": [
     {
      "code": "DeiYezLS4M4",
      "url": "https://www.instagram.com/p/DeiYezLS4M4/",
@@ -106,7 +110,7 @@
      "lang": "en",
      "early": false,
      "seen": false,
-     "thumb": "thumbs/DeiYezLS4M4.jpg"
+     "skip": "Ad"
     },
     {
      "code": "De8K8pzSYcP",
@@ -122,7 +126,7 @@
      "lang": "en",
      "early": false,
      "seen": false,
-     "thumb": "thumbs/De8K8pzSYcP.jpg"
+     "skip": "Life moment"
     }
    ]
   },
@@ -130,13 +134,15 @@
    "id": "reno",
    "name": "Home renovation and interior",
    "color": "#C9B8E6",
-   "reels": []
+   "reels": [],
+   "hidden": []
   },
   {
    "id": "finance",
    "name": "Singapore personal finance",
    "color": "#B9D98A",
-   "reels": []
+   "reels": [],
+   "hidden": []
   }
  ],
  "health": [
@@ -149,9 +155,29 @@
    "handle": "donald.voo",
    "niche": "finance",
    "reason": "No reels in the last 30 days."
+  },
+  {
+   "handle": "littledayout",
+   "niche": "family",
+   "reason": "Mostly ads, events or life moments: 9 of their last 10 reels. Their spikes teach no format."
+  },
+  {
+   "handle": "ryanxgenesis",
+   "niche": "travel",
+   "reason": "Mostly ads, events or life moments: 17 of their last 20 reels. Their spikes teach no format."
+  },
+  {
+   "handle": "shrugmyshoulder",
+   "niche": "travel",
+   "reason": "Mostly ads, events or life moments: 14 of their last 17 reels. Their spikes teach no format."
+  },
+  {
+   "handle": "thenewageparents",
+   "niche": "family",
+   "reason": "Mostly ads, events or life moments: 12 of their last 15 reels. Their spikes teach no format."
   }
  ],
- "status": "Skipped this week. The run would cost about $0.42, and the Apify plan has $0.38 of credit left this cycle. Upgrade it at apify.com/pricing.",
+ "status": "Found 0 standout reels you can copy, and hid 6 that spiked as ads, events or life moments. Next full run needs the Apify upgrade.",
  "spend": {
   "month": "2026-10",
   "usd": 1.02,

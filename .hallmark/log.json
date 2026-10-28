@@ -1,0 +1,22 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "app",
+  "shape": "app screen",
+  "theme": "almanac",
+  "axes": "mid/grotesk-sans/chromatic-magenta",
+  "nav": "top bar + ledger jump table",
+  "footer": "spend meter and method note",
+  "signature": "weekly ledger: copyable vs hidden per niche",
+  "sections": [
+   "ledger",
+   "his reels",
+   "niches",
+   "accounts to replace",
+   "footer"
+  ],
+  "prompt": "weekly list of Instagram reels worth copying for a Singapore real estate agent personal brand",
+  "date": "2026-10-28"
+ }
+]
