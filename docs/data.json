@@ -151,11 +151,11 @@
    "reason": "No reels in the last 30 days."
   }
  ],
- "status": "Found 6 standout reels across 3 niches.",
+ "status": "Skipped this week. The run would cost about $0.42, and the Apify plan has $0.38 of credit left this cycle. Upgrade it at apify.com/pricing.",
  "spend": {
   "month": "2026-10",
   "usd": 1.02,
   "cap": 25
  },
- "checked": "2026-10-28T15:06:07+00:00"
+ "checked": "2026-10-28T15:25:07+00:00"
 }
