@@ -1,0 +1,941 @@
+{
+  "own_account": "",
+  "budget_usd_per_month": 25,
+  "apify_price_per_1000": 2.7,
+  "actors": {
+    "reels": "apify/instagram-reel-scraper",
+    "profiles": "apify/instagram-profile-scraper",
+    "hashtags": "apify/instagram-hashtag-scraper"
+  },
+  "min_score": 2.5,
+  "per_niche": 10,
+  "per_creator": 2,
+  "max_age_days": 14,
+  "early_days": 2,
+  "reels_first_fetch": 20,
+  "reels_weekly_fetch": 8,
+  "followers": {
+    "sg": [
+      2000,
+      60000
+    ],
+    "global": [
+      5000,
+      30000
+    ]
+  },
+  "niches": [
+    {
+      "id": "realestate",
+      "name": "Real estate agents",
+      "color": "#9FD3C1",
+      "hashtags": {
+        "sg": [
+          "sgproperty",
+          "sgrealestate",
+          "propertysg",
+          "sghdb",
+          "sgcondo",
+          "singaporeproperty"
+        ],
+        "global": [
+          "realestateagent",
+          "realtor",
+          "realestatetips",
+          "homeseller"
+        ]
+      }
+    },
+    {
+      "id": "fitness",
+      "name": "Health and fitness",
+      "color": "#F3D57A",
+      "hashtags": {
+        "sg": [
+          "sgfitness",
+          "sgrunners",
+          "sgfootball",
+          "fitnesssg",
+          "sghealthyfood"
+        ],
+        "global": [
+          "fitover40",
+          "runningmotivation",
+          "fitdad",
+          "healthyhabits"
+        ]
+      }
+    },
+    {
+      "id": "family",
+      "name": "Family, dad and dog",
+      "color": "#F2B6A0",
+      "hashtags": {
+        "sg": [
+          "sgdad",
+          "sgfamily",
+          "sgdogs",
+          "dogsofsingapore",
+          "sgparents"
+        ],
+        "global": [
+          "dadlife",
+          "dogdad",
+          "girldad",
+          "familyvlog"
+        ]
+      }
+    },
+    {
+      "id": "travel",
+      "name": "Travel",
+      "color": "#A8C8E8",
+      "hashtags": {
+        "sg": [
+          "sgtravel",
+          "sgtravellers",
+          "travelsg",
+          "singaporetravel"
+        ],
+        "global": [
+          "travelreels",
+          "familytravel",
+          "budgettravel"
+        ]
+      }
+    },
+    {
+      "id": "reno",
+      "name": "Home renovation and interior",
+      "color": "#C9B8E6",
+      "hashtags": {
+        "sg": [
+          "sgreno",
+          "hdbreno",
+          "sginterior",
+          "btoreno",
+          "hdbinteriordesign",
+          "sghomes"
+        ],
+        "global": [
+          "homereno",
+          "interiordesign",
+          "homemakeover"
+        ]
+      }
+    },
+    {
+      "id": "finance",
+      "name": "Singapore personal finance",
+      "color": "#B9D98A",
+      "hashtags": {
+        "sg": [
+          "sgfinance",
+          "sgpersonalfinance",
+          "cpf",
+          "sginvesting",
+          "financesg"
+        ],
+        "global": [
+          "personalfinance",
+          "moneytips",
+          "financialliteracy"
+        ]
+      }
+    }
+  ],
+  "accounts": [
+    {
+      "handle": "yaseenproperty",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "therealestate.couple",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "johansutaman",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "prabnathan",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "garyleonidas",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "agnesezy",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "theahoi_",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "chengyiinteriordesign",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "craft_and_co_sg",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "ehertitude",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "propertywithirfaan",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "joashwtchan",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "whatnowjeff",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "dinahsuperteamrealtor",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "klyssachong",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "splendorachic",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "jacquelynsam",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "jnatawate",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "shelbstterr",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "pat.ang",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "danialjaffery",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "jeromeyap",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "mishwijaya",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "affa_jaffar",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "evangelinecloud1",
+      "niche": "realestate",
+      "region": "global",
+      "lang": "en"
+    },
+    {
+      "handle": "swashed",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "xuanyun",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "lirenebay",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "universalsoulja",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "studs_up.sg",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "giuseppeciardella",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "doublerubble_",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "healthyfoodlady",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "futbolita",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "lawstrength",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "connar.mackay",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "arisa.simin",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "shaunye_",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "lishantheyogi",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "d_lowwx",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "msjolyn",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "yurythefury",
+      "niche": "fitness",
+      "region": "global",
+      "lang": "en"
+    },
+    {
+      "handle": "thenewageparents",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "coton.pako",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "coco_mcweenie",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "fairyfitmama",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "debzlin",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "selinahime",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "suelynang",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "littledayout",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "chaine_fabian",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "ryanxgenesis",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "weijjian",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "bulutbeary",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "suciawita",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "mrs.sambavam",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "geraldorjeff",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "charlee.barlee",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "derrickhoh",
+      "niche": "family",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "olliethelemonbeagle",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "benjidoodlebear",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "butter_the_sheltie",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "qingxiangsqx",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "2prettysistas",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "lazyboihorlicks",
+      "niche": "family",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "duffytheteacup",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "puglizzy",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "baconlee.puipui",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "comibichon",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "marshy032025",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "mulansamoyed",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "benvborg",
+      "niche": "fitness",
+      "region": "global",
+      "lang": "en"
+    },
+    {
+      "handle": "qinlovesmacaronsss",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "sparkkpistols",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "shiumoon",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "alexiusboy",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "p.riscillaong",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "josephinethama",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "thetomitomo",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "sweetinbiscuits",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "_jasminalexis",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "nadnut",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "mummy_casuarina",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "happyzilla10",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "ayaalan.foodie",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "jiaxthepiggybanker",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "jiajia620",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "60pagepassportsz",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "gracestpetite",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "dairyandcream",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "tomatojen",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "lindaacinz",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "supermarket.date",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "ourkozykorner",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "homuhomu.sg",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "couple_abode",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "xueling.id",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "northshoreloft",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "elizabethxhome",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "homewithleongs",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "adventures8home",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "aki_kaiyun",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "ourtanhowse",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "absolookid",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "homemalihom",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "tanuzen",
+      "niche": "family",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "bubb.home",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "jujurenovationsg",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "iam_shirleyt",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "weikencom",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "idmayjie",
+      "niche": "reno",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "demiizhuangg",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "meienmaryann",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "sumita_ndrjpth",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "donald.voo",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "jordentan",
+      "niche": "fitness",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "ferrisfrancis",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "______avril______",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "shrugmyshoulder",
+      "niche": "travel",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "isaacgsk",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "lindayangg_",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "licaiohyeah",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "zh"
+    },
+    {
+      "handle": "ckligrowth",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "ckokadir",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "clarenceleeeee",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "g.y.mak",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "wealth_steward",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "linden_t",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "andrewpheefifofum",
+      "niche": "realestate",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "st_headstart",
+      "niche": "finance",
+      "region": "sg",
+      "lang": "en"
+    },
+    {
+      "handle": "erinspencer_",
+      "niche": "finance",
+      "region": "global",
+      "lang": "en"
+    },
+    {
+      "handle": "moneywithcamacho",
+      "niche": "finance",
+      "region": "global",
+      "lang": "en"
+    }
+  ]
+}

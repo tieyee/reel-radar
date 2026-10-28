@@ -1,0 +1,9 @@
+{
+ "status": "Skipped this week. The run would cost about $7.13, and the Apify plan has $1.37 of credit left this cycle. Upgrade it at apify.com/pricing.",
+ "spend": {
+  "month": "2026-10",
+  "usd": 0.0,
+  "cap": 25
+ },
+ "checked": "2026-10-28T15:01:07+00:00"
+}
