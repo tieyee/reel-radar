@@ -1,6 +1,29 @@
 {
  "spend": {
   "month": "2026-10",
-  "usd": 0.0
- }
+  "usd": 1.02
+ },
+ "health": {
+  "month": "2026-10",
+  "flags": [
+   {
+    "handle": "futbolita",
+    "niche": "fitness",
+    "reason": "No reels in the last 30 days."
+   },
+   {
+    "handle": "donald.voo",
+    "niche": "finance",
+    "reason": "No reels in the last 30 days."
+   }
+  ]
+ },
+ "shown": [
+  "De1czAuzvCo",
+  "De28HTfB3K_",
+  "DerFNG7DdJc",
+  "DeiYezLS4M4",
+  "De8K8pzSYcP",
+  "Deviq__gNfG"
+ ]
 }

@@ -1,9 +1,161 @@
 {
- "status": "Skipped this week. The run would cost about $7.13, and the Apify plan has $1.37 of credit left this cycle. Upgrade it at apify.com/pricing.",
+ "generated": "2026-10-28T15:06:07+00:00",
+ "curve_learned": false,
+ "own": null,
+ "niches": [
+  {
+   "id": "realestate",
+   "name": "Real estate agents",
+   "color": "#9FD3C1",
+   "reels": []
+  },
+  {
+   "id": "fitness",
+   "name": "Health and fitness",
+   "color": "#F3D57A",
+   "reels": [
+    {
+     "code": "Deviq__gNfG",
+     "url": "https://www.instagram.com/p/Deviq__gNfG/",
+     "owner": "swashed",
+     "niche": "fitness",
+     "score": 2.6,
+     "age_days": 7.4,
+     "views": 14018,
+     "caption": "Tried the newly revamped Food Bar @7elevensg 313@Somerset branch for a cheap protein hack after my workouts! \n\nIf you’re looking for an affordable, fuss-free meal, you can now build your own box by mixing and matching from a variety of Food Bar bites to suit your cravings and budget! Meals start from just $4.50, so it’s perfect for a quick bite or an everyday meal.\n\n🔥 Here’s the deal: From now til",
+     "audio": "A Pale Shade by Tokyo.Beats, Tokyo.BeatsCreation",
+     "posted": "2026-10-21T04:24:36+00:00",
+     "lang": "en",
+     "early": false,
+     "seen": false,
+     "thumb": "thumbs/Deviq__gNfG.jpg"
+    }
+   ]
+  },
+  {
+   "id": "family",
+   "name": "Family, dad and dog",
+   "color": "#F2B6A0",
+   "reels": [
+    {
+     "code": "De1czAuzvCo",
+     "url": "https://www.instagram.com/p/De1czAuzvCo/",
+     "owner": "thenewageparents",
+     "niche": "family",
+     "score": 20.2,
+     "age_days": 5.2,
+     "views": 36140,
+     "caption": "🚨 𝐓-𝐑𝐄𝐗 𝐒𝐏𝐎𝐓𝐓𝐄𝐃 𝐈𝐍 𝐒𝐈𝐍𝐆𝐀𝐏𝐎𝐑𝐄! 🦖🇸🇬 𝐖𝐢𝐧 𝐅𝐑𝐄𝐄 𝐃𝐢𝐧𝐨 𝐏𝐥𝐮𝐬𝐡𝐢𝐞𝐬 & 𝐌𝐞𝐫𝐜𝐡𝐚𝐧𝐝𝐢𝐬𝐞 𝐓𝐡𝐢𝐬 𝐖𝐞𝐞𝐤𝐞𝐧𝐝!\n\nA mighty Tyrannosaurus rex is walking among us! From 23 to 25 October 2026, the 𝐃𝐈𝐍𝐎𝐒𝐀𝐔𝐑 𝐎𝐃𝐘𝐒𝐒𝐄𝐘 𝐓-𝐑𝐞𝐱 𝐖𝐚𝐥𝐤𝐚𝐛𝐨𝐮𝐭 is roaring into shopping malls and community hubs across Singapore—and you can meet it UP CLOSE! 🦕✨\n\nWe stopped by for the first walkabout today, and it was incredible! 🤯 Here is how you can catch the ",
+     "audio": "Original audio",
+     "posted": "2026-10-23T11:29:29+00:00",
+     "lang": "en",
+     "early": false,
+     "seen": false,
+     "thumb": "thumbs/De1czAuzvCo.jpg"
+    },
+    {
+     "code": "De28HTfB3K_",
+     "url": "https://www.instagram.com/p/De28HTfB3K_/",
+     "owner": "thenewageparents",
+     "niche": "family",
+     "score": 5.8,
+     "age_days": 4.6,
+     "views": 9991,
+     "caption": "🎬 Take a walk through Sembawang Estate's Halloween decorations 👻\n\nEerie clowns, cobwebs and creepy \"No one leaves\" signs line the streets around Montreal Road and Canada Road - and the residents have outdone themselves this year. Some spend weeks preparing these setups, and it shows. 🎃\n\nBut Sembawang is just ONE of the many spooky spots in Singapore this October. From trick-or-treat trails to haun",
+     "audio": "Original audio",
+     "posted": "2026-10-24T01:00:46+00:00",
+     "lang": "en",
+     "early": false,
+     "seen": false,
+     "thumb": "thumbs/De28HTfB3K_.jpg"
+    },
+    {
+     "code": "DerFNG7DdJc",
+     "url": "https://www.instagram.com/p/DerFNG7DdJc/",
+     "owner": "littledayout",
+     "niche": "family",
+     "score": 2.6,
+     "age_days": 9.2,
+     "views": 15101,
+     "caption": "The colourful Sit-n-Read node at City Square Mall is inviting and features Kobo eReaders that offer bite-sized previews of a curated digital collection. Similar to existing Sit-n-Read Nodes, patrons can enjoy a curated collection of physical pre-loved books for both adults and children.\n\nRead more details about this Sit-n-Read node at our link in profile:\n\nhttps://www.littledayout.com/city-square-",
+     "audio": "Original audio",
+     "posted": "2026-10-19T10:49:53+00:00",
+     "lang": "en",
+     "early": false,
+     "seen": false,
+     "thumb": "thumbs/DerFNG7DdJc.jpg"
+    }
+   ]
+  },
+  {
+   "id": "travel",
+   "name": "Travel",
+   "color": "#A8C8E8",
+   "reels": [
+    {
+     "code": "DeiYezLS4M4",
+     "url": "https://www.instagram.com/p/DeiYezLS4M4/",
+     "owner": "shrugmyshoulder",
+     "niche": "travel",
+     "score": 11.0,
+     "age_days": 12.6,
+     "views": 229627,
+     "caption": "‼️ Travel Hack: Get a Mainland China number in Singapore! \n\n🇸🇬 CMLink (中国移动) SIM-only Plan:\n• 10 minutes fuss-free porting\n• Powered by the Singtel 5G+ network\n• S$11.10/ S$15 5G plan includes shared data for Mainland China, and Hong Kong\n\nBrowse the full plan options over at @cmlinksg!\n\n⭐️ October Promo\n• 50% off 6 months for non-Singtel port-ins (S$11.10 & S$15 5G plans)\n• FREE international roa",
+     "audio": "Original audio",
+     "posted": "2026-10-16T01:45:33+00:00",
+     "lang": "en",
+     "early": false,
+     "seen": false,
+     "thumb": "thumbs/DeiYezLS4M4.jpg"
+    },
+    {
+     "code": "De8K8pzSYcP",
+     "url": "https://www.instagram.com/p/De8K8pzSYcP/",
+     "owner": "shrugmyshoulder",
+     "niche": "travel",
+     "score": 5.0,
+     "age_days": 2.5,
+     "views": 72609,
+     "caption": "THE DAY WE FOUND OUT! 🥹🍼🧸\n\n#shrugmyshoulder",
+     "audio": "Original audio",
+     "posted": "2026-10-26T02:10:38+00:00",
+     "lang": "en",
+     "early": false,
+     "seen": false,
+     "thumb": "thumbs/De8K8pzSYcP.jpg"
+    }
+   ]
+  },
+  {
+   "id": "reno",
+   "name": "Home renovation and interior",
+   "color": "#C9B8E6",
+   "reels": []
+  },
+  {
+   "id": "finance",
+   "name": "Singapore personal finance",
+   "color": "#B9D98A",
+   "reels": []
+  }
+ ],
+ "health": [
+  {
+   "handle": "futbolita",
+   "niche": "fitness",
+   "reason": "No reels in the last 30 days."
+  },
+  {
+   "handle": "donald.voo",
+   "niche": "finance",
+   "reason": "No reels in the last 30 days."
+  }
+ ],
+ "status": "Found 6 standout reels across 3 niches.",
  "spend": {
   "month": "2026-10",
-  "usd": 0.0,
+  "usd": 1.02,
   "cap": 25
  },
- "checked": "2026-10-28T15:01:07+00:00"
+ "checked": "2026-10-28T15:06:07+00:00"
 }
