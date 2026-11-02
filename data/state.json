@@ -1,10 +1,10 @@
 {
  "spend": {
-  "month": "2026-10",
-  "usd": 1.02
+  "month": "2026-11",
+  "usd": 0.47
  },
  "health": {
-  "month": "2026-10",
+  "month": "2026-11",
   "flags": [
    {
     "handle": "futbolita",
@@ -19,11 +19,6 @@
   ]
  },
  "shown": [
-  "De1czAuzvCo",
-  "De28HTfB3K_",
-  "DerFNG7DdJc",
-  "DeiYezLS4M4",
-  "De8K8pzSYcP",
-  "Deviq__gNfG"
+  "DfHXP3By0Ks"
  ]
 }
